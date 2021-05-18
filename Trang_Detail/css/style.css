@@ -1,0 +1,1074 @@
+body{
+    /* text-decoration: none; */
+    min-width: 1579.17px;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* css cho trang chủ */
+
+html.noscroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+
+/* css cho trang chủ */
+
+#homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100%-20px);
+}
+
+/* css cho header - anh em cop từ đoạn này*/
+
+#homepage--header {
+    top: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+
+/* css cho header khi scroll */
+
+.scrollHeader {
+    transition: 0.5s;
+    box-shadow: 0px 3px 15px rgba(141, 135, 135, 0.336);
+}
+
+
+/* css cho từng thành phần trong header */
+
+
+/* Left + Right Bar */
+
+.homepage--header__leftNavBar,
+.homepage--header__rightNavBar {
+    width: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+
+/* Navigation bar */
+
+.homepage--header__navBar {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 400px;
+    
+}
+a{
+    color: black;
+}
+
+.header--buttonCSS {
+    cursor: pointer;
+    color: black;
+    
+}
+
+.header--buttonCSS:hover,
+.underline:hover {
+    text-decoration: underline solid 2px;
+    text-underline-position: under;
+    
+}
+
+.header--buttonCSS.underline {
+    text-decoration: underline 2px;
+    text-underline-position: under;
+    
+}
+
+
+
+
+/* Logo */
+
+.homepage--header__logo {
+    font-size: 20px;
+    color: brown;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    line-height: 100%;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: serif
+}
+
+
+/* Search icon */
+
+.fa.fa-search {
+    cursor: pointer;
+}
+
+
+/* Shopping cart */
+
+.fa.fa-shopping-cart {
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    transform: unset;
+}
+
+.rightNavBar__cartCount {
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: chocolate;
+    color: white;
+    margin-left: -10px;
+}
+
+
+
+/*---------------------------------Main----------------------------------*/
+/* Top produc (ảnh thumb, ảnh lớn, chi tiết và đánh giá)  */
+.main{
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    
+}
+.top{
+    background-color: whitesmoke;
+}
+.topContainer{
+    width: 90%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    display: flex;
+    
+}
+.topLeftContainer{
+    /* background-color: rgb(248, 218, 178); */
+    width: 60%;
+    display: flex;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+.smallImg{
+    /* border: 1px solid black; */
+    width: 13%;
+    margin-right: 10px;
+}
+.imgSmall{
+    width: 100%;
+    /* border: 1px solid rgb(255, 225, 225); */
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.imgBig img{
+    transition: all 1s;
+    width: 100%;
+    
+}
+.imgBig:hover img{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); 
+}
+
+.bigImg{
+    width: 85%;
+}
+.imgBig{
+    overflow: hidden;
+}
+.topRightContainer{
+    width: 40%;
+    /* background-color: rgb(220, 220, 255); */
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.topOfTopRightContainer a,i{
+    color: gray;
+    font-size: 13px;
+}
+.allDivRight{
+    padding-top: 20px ;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nameProduct > h1{
+    margin-bottom: 16px;
+    font-size: 40px;
+    font-weight: 400;
+}
+.price{
+    margin: 0px 10px 10px 0px;
+    display: inline-block;
+    font-size: 20px;
+    color: #686868;
+    font-weight: 400;
+}
+.discount{
+    border: 1.5px solid rgb(253, 105, 105);
+    display: inline-block;
+    border-radius: 15px;
+    padding: 0px 10px;
+    color: red;
+    margin-right: 10px;
+}
+.price > :nth-child(2){
+    color: gray;
+}
+.star{
+    display: flex;
+}
+.star i{
+    color: black;
+    /* display: flex; */
+    cursor: pointer;
+}
+.describe{
+    /* font-size: auto; */
+    margin-bottom: 15px;
+    color: #686868;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+
+/* 3 button */
+
+/* Hộp số lượng */
+.twoBox{
+    display: flex;
+   
+}
+.box{
+    border: 1px solid rgb(255, 234, 234);
+    display: flex;
+    text-align: center;
+    /* height: 50px; */
+    margin-right: 10px;
+    align-items: center;
+    width: 120px;
+    justify-content: space-between;
+    background-color: white;
+}
+ .box div{
+    border: none;
+    background-color: white;
+    /* font-size: 30px; */
+    width: calc(100%/3);
+    height: 100%;
+}
+.box p{
+    margin: 4.5px 0px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    font-size: 25px;
+    cursor: pointer;
+    /* border: 1px solid blue; */
+}
+.total{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    background-color: white;
+    line-height: 40px;
+    font-size: 20px;
+}
+.total:focus{
+    outline: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.addToCart button{
+    height: 50px;
+    padding: 0px 120px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+}
+
+
+/* css .hastag */
+
+.hastag a{
+    text-decoration: none;
+    color: black;
+}
+
+.hastag{
+    margin-top: 30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+}
+.hastag div{
+    display: inline-flex;
+    
+}
+.hastag p{
+    color: gray;
+}
+.hastag .titleSku{
+    color: black;
+}
+.sku{
+    margin-left: 10px;
+    color: #848485;
+    font-size: 14px;
+}
+.titleSku{
+    margin-left: 10px;
+    font-size: 14px;
+}
+.titleCate{
+    margin-left: 20px;
+    font-size: 14px;
+}
+.cate a{
+    
+    font-size: 14px;
+}
+.dauphay{
+    margin-right: 10px;
+    font-size: 14px;
+}
+.tag{
+    margin-left: 10px;
+    /* font-size: 14px; */
+}
+.botHastag{
+    font-size: 14px;
+}
+/* css bottomRight */
+.bottomRight{
+    margin-top: 30px;
+}
+.share{
+    display: flex;
+}
+.tilteShare{
+    font-size: 14px;
+    margin-left: 10px;
+    color: gray;
+}
+.share i{
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+
+/* CSS Bot */
+.botContainer{
+    background-color: white;
+    width: 90%;
+    margin: auto;
+}
+.descriptionContainer{
+    margin-bottom: 40px;
+}
+.description > h2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0px 15px;
+    font-weight: 400;
+}
+.titleDes{
+    margin: 0px 285px;
+}
+.titleDes p {
+    margin-bottom: 28px;
+    color: #686868;
+    font-size: 15px;
+}
+.titleDes h4{
+    font-size: 15px;
+    font-weight: 400;
+}
+.titleDes ul li{
+    color: #686868;
+    font-size: 15px;
+    margin-left: 50px;
+}
+
+/* Additional information */
+.informationContainer{
+    margin-bottom: 40px;
+}
+.information > h2{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0px 15px;
+    font-weight: 400;
+}
+.titleInfor{
+    margin: 0px 285px;
+}
+
+.titleInfor > tbody{
+    text-align: left;
+}
+th{
+    padding: 10px 0px;
+    padding-right: 150px;
+    font-weight: 400;
+    font-size: 15px;
+}
+td{
+    font-size: 15px;
+    color: #686868;
+}
+/* Sản phẩm liên quan */
+.containerImgProduct{
+    position: relative;
+        /* border: 1px solid black; */
+    /* padding: 0px 5px; */
+
+}
+.containerImgProduct img{
+    border: 1px solid rgb(255, 225, 225);
+    width: 95%;
+    margin: auto;
+}
+.relatedProduct h2{
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+.listRelated ul{
+    display: flex;
+    list-style: none;
+}
+.listRelated ul li{
+    width: 25%;
+}
+.iconImgBott{
+    width: 50%;
+    margin: auto;
+}
+.boxIcon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+.boxIcon div{
+    padding: 8px 15px;
+    border: 1px solid rgb(253, 241, 241);
+    background-color: whitesmoke;
+    cursor: pointer;
+    box-shadow: 0 0 3px  rgb(228, 228, 228);
+}
+
+.boxIcon :nth-child(1){
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.boxIcon > div > i:hover {
+    font-family: FontAwesome;
+    content: f004;  
+}
+.boxIcon :nth-child(2){
+    border-top: 1px solid rgb(253, 241, 241);
+    border-bottom: 1px solid rgb(253, 241, 241);
+}
+.boxIcon :nth-child(3){
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.icon {
+    font-size: 20px;  
+    align-items: center; 
+}
+.icon i {
+    font-size: 17px;  
+    align-items: center; 
+}
+/* CSS Button hiện lên khi hover ảnh */
+
+.containerImgProduct:hover .boxIcon{
+    opacity: 1;
+    transition: 0.5s;
+    transform: scale(1);  
+}
+
+/* Css ảnh hover hiện ảnh khác */
+.containerImgProduct .img1{
+    position: absolute;
+    top: 0;
+    right: 9px;
+}
+.containerImgProduct:hover .img1{
+    opacity: 0;
+}
+
+/* CSS Tên và Giá Bottom */
+.nameAndPriceBot div{
+    margin-left: 6px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.productTitle h3{
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+
+/* Set thuộc tính chung */
+
+.homepage--footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    background-color: #3a3a3a;
+}
+
+
+/* css cho phần điều hướng của footer*/
+
+.homepage--footer__navigator {
+    color: white;
+    height: 78%;
+    background-color: #3a3a3a;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* css cho các danh mục trong phần điều hướng */
+
+.homepage--footer__menu {
+    background-color: #3a3a3a;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    align-items: center;
+}
+
+
+/* css các thuộc tính như chữ, màu chữ trong phần điều hướng */
+
+.footer__menu {
+    width: 150px;
+    background-color: inherit;
+    color: white;
+    font-size: small;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.2s;
+    height: 15px;
+}
+
+
+/* css cho Tiêu đề của danh mục trong phần điều hướng */
+
+.footer__menu.title {
+    color: rgb(196, 189, 189);
+    margin-top: 55px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    cursor: unset;
+}
+
+
+/* css riêng cho menu bên phải của phần điều hướng */
+
+.homepage--footer__menu.menuRight {
+    flex-basis: 30%;
+    color: rgb(196, 189, 189);
+    /* justify-content: space-between; */
+    align-items: flex-start;
+}
+
+.footer__menu.content {
+    width: 90%;
+    margin-bottom: 40px;
+    color: rgb(196, 189, 189);
+    cursor: unset;
+}
+
+
+/* css cho box con trong right menu của footer */
+
+.footer__menu.form {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.footer--menu--inputText {
+    width: 220px;
+    height: 40px;
+    outline-style: none;
+    border: 1px solid white;
+}
+
+.footer--menu--signUpButton {
+    height: 40px;
+    width: 75px;
+    outline-style: none;
+    border: 1px solid white;
+    background-color: inherit;
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.footer--menu--signUpButton:hover {
+    color: #a09d9d;
+}
+
+
+/* css cho vạch footer social */
+
+.homepage--footer__social {
+    background-color: inherit;
+    height: 20%;
+    border-top: 1px solid #a09d9d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa.fa-twitter,
+.fa.fa-facebook,
+.fa.fa-instagram {
+    font-size: 30px;
+    width: fit-content;
+    background-color: inherit;
+    color: seashell;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.fa.fa-twitter:hover,
+.fa.fa-facebook:hover,
+.fa.fa-instagram:hover {
+    transform: scale(1.1);
+}
+
+
+/* Nút kéo lên trên */
+
+.homepage--upButton i {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    height: 10px;
+    width: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 22px;
+    background-color: #ffffff42;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.103);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.5s;
+    visibility: hidden;
+}
+
+.homepage--upButton i:hover {
+    border: 2px solid black;
+}
+
+.homepage--upButton.active i {
+    transition: 0.5s;
+    transform: translateY(-30px);
+    visibility: visible;
+}
+
+.homepage--upButton.inActive i {
+    transition: 0.2s;
+    transform: translateY(30px);
+    visibility: hidden;
+}
+
+
+/* FORM LOGIN */
+
+
+/* Khung */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+.homepage--modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+/* Lớp mờ */
+
+.modal--overlay {
+    background-color: rgba(167, 167, 167, 0.76);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: hidden;
+}
+
+
+/* Khung login */
+
+.modal--body {
+    height: 500px;
+    width: 540px;
+    background-color: white;
+    position: absolute;
+    border-radius: 3px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --growth-from: 0.8;
+    --growth-to: 1;
+    animation: growth linear 0.1s;
+    box-shadow: 0 0 30px rgba(3, 3, 3, 0.158);
+}
+
+
+/* Khung nhỏ chứa form login và register */
+
+.modal--body__loginInner,
+.modal--body__registerInner {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal--body__registerInner {
+    z-index: 0;
+    display: none;
+    height: 85%;
+}
+
+
+/* Tiêu đề */
+
+.modal--body__title {
+    font-size: xx-large;
+}
+
+
+/* Khung nhập username và password */
+
+.modal--userLoginInput {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.modal--userRegisterInput {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    justify-content: space-between;
+}
+
+
+/* Chỉnh kích thước cho thẻ input username và password */
+
+.modal--userInput {
+    height: 40px;
+    width: 400px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.295);
+    outline-style: none;
+}
+
+.modal--userInput.password.confirmFail {
+    border-bottom: 1px solid red;
+}
+
+.modal--userInput:focus {
+    border-bottom: 2px solid black;
+}
+
+
+/* Eyes */
+
+.modal--userInput.passwordContainner {
+    position: relative;
+}
+
+.modal--eyesContainer {
+    height: 100%;
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.modal--eyes {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.modal--eyes.show {
+    display: none;
+}
+
+
+/* Phần ghi nhớ tên đăng nhập và quên pass */
+
+.modal--checkBoxOption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    position: relative;
+}
+
+.checkBoxOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.checkBoxOption.checkBox {
+    height: 15px;
+    width: 15px;
+}
+
+.checkBoxText {
+    position: absolute;
+    left: 25px;
+}
+
+
+/* Nút login và register */
+
+.btn.modal--login,
+.btn.modal--registerButton {
+    background-color: black;
+    width: 400px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: ease-out 0.8s;
+}
+
+.btn.modal--login:hover,
+.btn.modal--registerButton:hover {
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+
+/* Nút chuyển trạng thái đã có tài khoản hoặc chưa */
+
+.modal--notMember,
+.modal--alreadyMember {
+    display: flex;
+    justify-content: space-between;
+    width: 185px;
+}
+
+
+/* Ghi nhớ tài khoản và quên mật khẩu */
+
+.btn.modal--registerSwitch,
+.lostPassword,
+.modal--alreadyAccout {
+    cursor: pointer;
+    color: black;
+    font-size: 17px;
+}
+
+
+/* Thong bao sai mat khau va confirm chua chinh xac */
+
+.form-message {
+    color: red;
+}
+
+
+/* Close */
+
+.modal--body__close img {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal--body__close img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Search form */
+
+.search--form {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 102;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background-color: #ffffff3f;
+}
+
+.search--form__boxParent {
+    position: absolute;
+    top: 0;
+    z-index: 103;
+    height: 300px;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search--form__boxChild {
+    position: absolute;
+    max-width: 800px;
+    min-width: 600px;
+    height: 50px;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search--form__input {
+    max-width: 800px;
+    min-width: 600px;
+    height: 50px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline-style: none;
+    font-size: x-large;
+}
+
+.search--form__button {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search--form__icon.fa.fa-search {
+    color: #3a3a3abd;
+    font-size: 20px;
+}
+
+.closeSearch {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #9b979725;
+    z-index: 104;
+    top: 5%;
+    right: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeSearch img {
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+}
+
+.closeSearch img:hover {
+    transform: scale(1.1);
+}

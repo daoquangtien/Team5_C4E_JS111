@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/39893cbee0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="underlineTitle(2),onloadData(),randomProduct()">
+    <div class="allPage" id="allPage">
+
+        <div id="homepage--header">
+            <div class="homepage--header__leftNavBar">
+                <a href="../index.html" class="homepage--header__logo">ARTDECOR</a>
+            </div>
+
+            <ul class="homepage--header__navBar">
+                <li class="header--buttonCSS underline" onclick="underlineTitle(0)">
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="header--buttonCSS underline" onclick="underlineTitle(1)">
+                    <a href="../Trang_Shop/index.html">Shop</a>
+
+                </li>
+                <li class="header--buttonCSS underline" onclick="underlineTitle(2)">
+                    <a href="#">Product</a>
+
+                </li>
+                <li class="header--buttonCSS underline" onclick="underlineTitle(3)">
+                    <a href="#">About us</a>
+
+                </li>
+                <li class="header--buttonCSS underline" onclick="underlineTitle(4)">
+                    <a href="#">Contact</a>
+                </li>
+
+            </ul>
+
+            <div class="homepage--header__rightNavBar">
+                <!-- <div onclick="showHomepageModal()" class="header--rightNavBar__login header--buttonCSS">Login</div> -->
+
+                <i class="header--rightNavBar__cart fa fa-search"></i>
+                <i class="header--rightNavBar__cart fa fa-shopping-cart"></i>
+                <div class="rightNavBar__cartCount">1</div>
+            </div>
+            <div class="search--form">
+                <div class="search--form__boxParent">
+                    <div class="search--form__boxChild">
+                        <input class="search--form__input" type="text" placeholder="Search products...">
+                        <div class="search--form__button">
+                            <i class="search--form__icon fa fa-search" title="Search"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal--overlay searchModalOverlay"></div>
+                <div onclick="closeModal()" class="closeSearch" title="Close">
+                    <img onclick="closeSearch()" src="./img/cancel.png" />
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Đây là phần chính -->
+        <div class="main" id="main">
+            <div class="top">
+                <!-- Phần hình ảnh đầu trang (thumb + ảnh lớn + chi tiết đánh giá) -->
+                <div class="topContainer">
+                    <div class="topLeftContainer">
+                        <!-- 4 Ảnh nhỏ -->
+                        <div class="smallImg">
+                            <div class="imgSmall">
+                                <div id="anh1">
+                                    <img src="./Img_Chi_Tiết_SP/IMG_Data/Big_Img/SP_1/1.webp" alt="" id="thumb1" onclick="click1()">
+                                </div>
+                            </div>
+                            <div class="imgSmall">
+                                <div id="anh2">
+                                    <img src="./Img_Chi_Tiết_SP/IMG_Data/Big_Img/SP_1/2.webp" alt="" id="thumb2" onclick="click2()">
+                                </div>
+                            </div>
+                            <div class="imgSmall">
+                                <div id="anh3">
+                                    <img src="./Img_Chi_Tiết_SP/IMG_Data/Big_Img/SP_1/3.webp" alt="" id="thumb3" onclick="click3()">
+                                </div>
+                            </div>
+                            <div class="imgSmall">
+                                <div id="anh4">
+                                    <img src="./Img_Chi_Tiết_SP/IMG_Data/Big_Img/SP_1/4.webp" alt="" id="thumb4" onclick="click4()">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ảnh lớn -->
+                        <div class="bigImg">
+                            <div class="imgBig">
+                                <img src="./Img_Chi_Tiết_SP/IMG_Data/Big_Img/SP_1/1.webp" alt="" id="firstImg">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="topRightContainer">
+                        <div class="allDivRight">
+                            <!-- Home Accessories After -->
+                            <div class="topOfTopRightContainer">
+                                <a href="https://goya.everthemes.com/demo-decor">Home</a>
+                                <i>/</i>
+                                <a href="https://goya.everthemes.com/demo-decor/product-category/accessories/">Accessories</a>
+                                <i>/</i>
+                                <a href="">Afteroom Coat Hanger</a>
+                            </div>
+                            <!-- Tên Sản Phẩm -->
+                            <div class="nameProduct">
+                                <h1>Afteroom Coat Hanger</h1>
+                                <p class="price">
+                                    <span>$59.00</span>
+                                    <span><strike>$76.00</strike></span>
+                                </p>
+                                <p class="discount">
+                                    <span class="numberDiscount">
+                                        22
+                                    </span>
+                                    <span>
+                                        %
+                                    </span>
+                                    <span>
+                                        Off
+                                    </span>
+                                </p>
+                                <div class="star" id="star">
+                                    <div id="star1" onclick="vote1()">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div id="star2" onclick="vote2()">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div id="star3" onclick="vote3()">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div id="star4" onclick="vote4()">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div id="star5" onclick="vote5()">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="describe">
+                                    A hanger that could correspond to the landmark’s style and improve its inhabitants daily comfort.
+                                </p>
+                            </div>
+                            <div class="allButton">
+                                <form action="">
+                                    <div class="threeButton">
+                                        <div class="twoBox">
+                                            <div class="box">
+                                                <div class="minus">
+                                                    <p class="sub" onclick="tru()">
+                                                        -
+                                                    </p>
+                                                </div>
+                                                <input type="number" class="total" id="sum" value="1">
+                                                <div class="plus">
+                                                    <p class="add" onclick="cong()">
+                                                        +
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="addToCart">
+                                                <button type="submit" onclick="Sale()">Add To Cart</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="hastag">
+                                <div class="topHastag">
+                                    <div>
+                                        <p class="sku">SKU:</p>
+                                        <p class="titleSku">LGHT183</p>
+                                    </div>
+                                    <div class="cate">
+                                        <p class="titleCate">Categories: &nbsp;</p>
+                                        <a href="../Trang_Accesories/index.html">Accessories</a>
+                                        <p class="dauphay">,</p>
+                                        <a href="../Trang_Decor/index.html">Decoration</a>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="botHastag">
+                                    <p class="tag">Tag: &nbsp;</p>
+                                    <a href="https://goya.everthemes.com/demo-decor/product-category/decoration/">decoration</a>
+                                </div>
+                            </div>
+
+                            <div class="bottomRight">
+                                <div class="share">
+                                    <p class="tilteShare">
+                                        Share
+                                    </p>
+                                    <i class="fab fa-facebook-f"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-pinterest"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bot">
+                <div class="botContainer">
+                    <div class="descriptionContainer">
+                        <div class="description">
+                            <h2>Description</h2>
+                            <div class="titleDes">
+                                <p>
+                                    “A lamp with personality” is how Perimeter Table Lamp has been described. I find that floor lamps are often big and dominant. An antidote to overbearing lamps, he conceived his new lamp to literally “peek” over a sofa or armchair. The proportions have
+                                    shrunk for the Table Lamp, with a dip in the top of the base for needful things – earplugs or jewellery.
+                                </p>
+                                <p>
+                                    Designed for apartment no. 50 at Le Corbusier’s ‘Cité Radieuse’ in Marseille, the Lamp’s aesthetic was centred on the idea to become a versatile everyday companion; one that could correspond to the landmark’s style and improve its inhabitants daily comfort.
+                                    <h4>
+                                        Product Details
+                                    </h4>
+                                </p>
+                                <ul>
+                                    <li>
+                                        Powder-coated/Plated Zinc Alloy
+                                    </li>
+                                    <li>
+                                        Electrical: 100-130V, Max 40W, IP20
+                                    </li>
+                                    <li>
+                                        Bulb Socket: G9
+                                    </li>
+                                    <li>
+                                        Bulb (included): LED, 4.5W, 100-130V, 450lm, 2700K, CRI 80, rated for 15,000 hours
+                                    </li>
+                                    <li>
+                                        Cord: 6.5 feet, white, fabric
+                                    </li>
+                                    <li>
+                                        US plug
+                                    </li>
+                                    <li>
+                                        Metal knob functions as switch and dimmer
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="informationContainer">
+                        <div class="information">
+                            <h2>Additional information</h2>
+                            <table class="titleInfor">
+                                <tbody>
+                                    <tr>
+                                        <th class="weight">WEIGHT</th>
+                                        <td class="weight_value">1.25 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="dimensions">DIMENSIONS</th>
+                                        <td class="dimensions_value"> 32 × 24 × 10 cm</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="color">COLOR</th>
+                                        <td class="color_value"> Black, Gold</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="relatedProductContainer">
+                        <div class="relatedProduct">
+                            <h2>
+                                Related products
+                            </h2>
+                            <div class="listRelated">
+                                <ul id="listRelatedProduct">
+                                    <li>
+                                        <div class="containerImgProduct">
+                                            <figure>
+                                                <a href="">
+                                                    <img src="./Img_Chi_Tiết_SP/b1.jpg" alt="" class="img1">
+                                                    <img src="./Img_Chi_Tiết_SP/b1.1.jpg" alt="" class="img2">
+                                                </a>
+                                                <div class="iconImgBott">
+                                                    <div class="boxIcon">
+                                                        <div class="icon">
+                                                            <i class="far fa-heart"></i>
+                                                        </div>
+                                                        <div class="icon">
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                        </div>
+                                                        <div class="icon">
+                                                            <i class="fas fa-search-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                            <div class="nameAndPriceBot">
+                                                <div class="productTitle">
+                                                    <h3>
+                                                        <a href="" title="Bollard Lamp">Bollard Lamp</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="price">
+                                                    <span class="titlePrice">
+                                                        <span>
+                                                            $
+                                                        </span>
+                                                    <span>
+                                                            143.00
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="containerImgProduct">
+                                            <figure>
+                                                <a href="">
+                                                    <img src="./Img_Chi_Tiết_SP/b2.jpg" alt="" class="img1">
+                                                    <img src="./Img_Chi_Tiết_SP/b2.2.jpg" alt="" class="img2">
+                                                </a>
+                                                <div class="iconImgBott">
+                                                    <div class="boxIcon">
+                                                        <div class="icon">
+                                                            <i class="far fa-heart"></i>
+                                                        </div>
+                                                        <div class="icon">
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                        </div>
+                                                        <div class="icon">
+                                                            <i class="fas fa-search-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                            <div class="nameAndPriceBot">
+                                                <div class="productTitle">
+                                                    <h3>
+                                                        <a href="" title="Norm Wall Clock">Norm Wall Clock</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="price">
+                                                    <span class="titlePrice">
+                                                        <span>
+                                                            $
+                                                        </span>
+                                                    <span>
+                                                            93.00
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="containerImgProduct">
+                                            <figure>
+                                                <a href="">
+                                                    <img src="./Img_Chi_Tiết_SP/b3.jpg" alt="" class="img1">
+                                                    <img src="./Img_Chi_Tiết_SP/b3.3.jpg" alt="" class="img2">
+                                                </a>
+                                                <div class="iconImgBott">
+                                                    <div class="boxIcon">
+                                                        <div class="icon">
+                                                            <i class="far fa-heart"></i>
+                                                        </div>
+                                                        <div class="icon">
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                        </div>
+                                                        <div class="icon">
+                                                            <i class="fas fa-search-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                            <div class="nameAndPriceBot">
+                                                <div class="productTitle">
+                                                    <h3>
+                                                        <a href="" title="Bobber Table Lamp">Bobber Table Lamp</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="price">
+                                                    <span class="titlePrice">
+                                                        <span>
+                                                            $
+                                                        </span>
+                                                    <span>
+                                                            284.00
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="containerImgProduct">
+                                            <figure>
+                                                <a href="">
+                                                    <img src="./Img_Chi_Tiết_SP/b4.jpg" alt="" class="img1">
+                                                    <img src="./Img_Chi_Tiết_SP/b4.4.jpg" alt="" class="img2">
+                                                </a>
+                                                <div class="iconImgBott">
+                                                    <div class="boxIcon">
+                                                        <div class="icon">
+                                                            <i class="far fa-heart"></i>
+                                                        </div>
+                                                        <div class="icon">
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                        </div>
+                                                        <div class="icon">
+                                                            <i class="fas fa-search-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                            <div class="nameAndPriceBot">
+                                                <div class="productTitle">
+                                                    <h3>
+                                                        <a href="" title="Norm Stone Lamp">Norm Stone Lamp</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="price">
+                                                    <span class="titlePrice">
+                                                        <span>
+                                                            $
+                                                        </span>
+                                                    <span>
+                                                            221.00
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="homepage--footer">
+
+                <div class="homepage--footer__navigator">
+                    <div class="homepage--footer__menu menuLeft">
+                        <div class="footer__menu title ">COMPANY</div>
+                        <div class="footer__menu css underline">Contact</div>
+                        <div class="footer__menu css underline">Store Locator</div>
+                        <div class="footer__menu css underline">About us</div>
+                    </div>
+
+                    <div class="homepage--footer__menu menuBetween">
+                        <div class="footer__menu title">HELP</div>
+                        <div class="footer__menu css underline">Order Tracking</div>
+                        <div class="footer__menu css underline">FAQ’s</div>
+                        <div class="footer__menu css underline">Terms & Conditions</div>
+                    </div>
+
+                    <div class="homepage--footer__menu menuBetween">
+                        <div class="footer__menu title">STORE</div>
+                        <div class="footer__menu css underline">Furniture</div>
+                        <div class="footer__menu css underline">Decoration</div>
+                        <div class="footer__menu css underline">Lighting</div>
+                    </div>
+
+                    <div class="homepage--footer__menu menuRight">
+                        <div class="footer__menu title">SIGN UP FOR FREE</div>
+                        <div class="footer__menu content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quia beatae.</div>
+
+                        <div class="footer__menu form ">
+                            <input class="footer--menu--inputText" type="text" placeholder="Your email adress">
+                            <input class="footer--menu--signUpButton" type="button" value="SIGN UP"></input>
+                        </div>
+                    </div>
+                </div>
+                <div class="homepage--footer__social ">
+                    <i class="footer fa fa-twitter "></i>
+                    <i class="footer fa fa-facebook "></i>
+                    <i class="footer fa fa-instagram "></i>
+                </div>
+            </div>
+
+            <div onclick="autoSrollUp()" class="homepage--upButton">
+                <i class="fa fa-long-arrow-up"></i>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+
+    </div>
+
+</body>
+<script src="../Data/data.js"></script>
+<script src="./js/index.js"></script>
+
+</html>
